@@ -1,0 +1,8 @@
+---
+- name: Set the MOTD message
+  copy:
+    content: "MOTD FOR TODEI:    Ansible Managed by {{ ansible_user_id }}"
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: '0644'

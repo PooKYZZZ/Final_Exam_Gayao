@@ -1,0 +1,15 @@
+---
+- name: Setup NagiOS, and MOTD
+  hosts: nagios
+  become: true
+  roles:
+    - nagios
+    - motd
+
+- name: Setup Apache, and MOTD
+  hosts: apache
+  become: true
+  roles:
+    - apache
+    - motd
+
